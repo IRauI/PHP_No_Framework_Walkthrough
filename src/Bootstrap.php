@@ -25,7 +25,15 @@ if ($environment !== 'production') {
 }
 $whoops->register();
 
-$content = '<h1>Hello World</h1>';
+$routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
+    $routes = include('Routes.php');
+    foreach ($routes as $route) {
+        $r->addRoute($route[0], $route[1], $route[2]);
+    }
+};
+
+$dispatcher = \FastRoute\simpleDispatcher($routeDefinitionCallback);
+
 $response->setContent($content);
 
 /**
