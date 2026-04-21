@@ -1,0 +1,21 @@
+{
+    "name": "raul-somesan/no-framework",
+    "description": "Walkthrough for php no framework",
+    "keywords": ["PHP", "No Framework"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raul-Somesan",
+            "email": "raul.somesan26@gmail.com",
+            "role": "Creator / Main Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Example\\": "src/"
+        }
+    }
+}
